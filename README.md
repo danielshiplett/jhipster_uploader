@@ -10,6 +10,18 @@ This example will implement a very simple file uploader resource/service to hand
 the required functions of the ng-flow client library.  It will save all uploaded
 chunks/files into the src/main/webapp/assets directory.
 
+## Usage
+
+Run the application with 'mvn spring-boot:run'
+
+Go to the site.
+
+Log in as user/user.
+
+See the new Navbar item for 'Uploader' and click it.
+
+Upload a file.
+
 ## Description (or what you need to know)
 
 The basic idea is that the ng-flow client will get a new flow identifier at the
