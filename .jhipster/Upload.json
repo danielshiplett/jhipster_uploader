@@ -1,0 +1,79 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "originalName",
+            "fieldType": "String",
+            "fieldNameCapitalized": "OriginalName",
+            "fieldNameUnderscored": "original_name",
+            "fieldInJavaBeanMethod": "OriginalName",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "uploadedAt",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "UploadedAt",
+            "fieldNameUnderscored": "uploaded_at",
+            "fieldInJavaBeanMethod": "UploadedAt",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "md5sum",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Md5sum",
+            "fieldNameUnderscored": "md5sum",
+            "fieldInJavaBeanMethod": "Md5sum",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "uploadComplete",
+            "fieldType": "Boolean",
+            "fieldNameCapitalized": "UploadComplete",
+            "fieldNameUnderscored": "upload_complete",
+            "fieldInJavaBeanMethod": "UploadComplete",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "totalChunks",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "TotalChunks",
+            "fieldNameUnderscored": "total_chunks",
+            "fieldInJavaBeanMethod": "TotalChunks",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "totalSize",
+            "fieldType": "Long",
+            "fieldNameCapitalized": "TotalSize",
+            "fieldNameUnderscored": "total_size",
+            "fieldInJavaBeanMethod": "TotalSize",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "completedAt",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "CompletedAt",
+            "fieldNameUnderscored": "completed_at",
+            "fieldInJavaBeanMethod": "CompletedAt",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "dto": "no",
+    "pagination": "no",
+    "validation": false
+}

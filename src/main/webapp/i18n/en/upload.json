@@ -1,0 +1,24 @@
+{
+    "uploadExampleApp": {
+        "upload" : {
+            "home": {
+                "title": "Uploads",
+                "createLabel": "Create a new Upload",
+                "createOrEditLabel": "Create or edit a Upload"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Upload {{ id }}?"
+            },
+            "detail": {
+                "title": "Upload"
+            },
+            "originalName": "OriginalName",
+            "uploadedAt": "UploadedAt",
+            "md5sum": "Md5sum",
+            "uploadComplete": "UploadComplete",
+            "totalChunks": "TotalChunks",
+            "totalSize": "TotalSize",
+            "completedAt": "CompletedAt"
+        }
+    }
+}

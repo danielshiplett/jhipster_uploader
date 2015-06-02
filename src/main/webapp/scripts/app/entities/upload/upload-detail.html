@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span translate="uploadExampleApp.upload.detail.title">Upload</span> {{upload.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="uploadExampleApp.upload.originalName">OriginalName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{upload.originalName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="uploadExampleApp.upload.uploadedAt">UploadedAt</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{upload.uploadedAt}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="uploadExampleApp.upload.md5sum">Md5sum</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{upload.md5sum}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="uploadExampleApp.upload.uploadComplete">UploadComplete</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{upload.uploadComplete}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="uploadExampleApp.upload.totalChunks">TotalChunks</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{upload.totalChunks}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="uploadExampleApp.upload.totalSize">TotalSize</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{upload.totalSize}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="uploadExampleApp.upload.completedAt">CompletedAt</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{upload.completedAt}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="upload"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

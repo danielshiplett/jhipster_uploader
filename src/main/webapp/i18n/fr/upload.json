@@ -1,0 +1,25 @@
+{
+    "uploadExampleApp": {
+        "upload" : {
+            "home": {
+                "title": "Uploads",
+                "createLabel": "Créer un nouveau Upload",
+                "createOrEditLabel": "Créer ou éditer un Upload"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Upload {{ id }} ?"
+            },
+            "detail": {
+                "title": "Upload"
+            },
+            "originalName": "OriginalName",
+            "uploadedAt": "UploadedAt",
+            "md5sum": "Md5sum",
+            "uploadComplete": "UploadComplete",
+            "totalChunks": "TotalChunks",
+            "totalSize": "TotalSize",
+            "completedAt": "CompletedAt"
+        }
+    }
+}
+

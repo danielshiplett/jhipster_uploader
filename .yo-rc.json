@@ -1,0 +1,20 @@
+{
+  "generator-jhipster": {
+    "baseName": "upload_example",
+    "packageName": "org.brewman.upload",
+    "packageFolder": "org/brewman/upload",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "no",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8",
+    "rememberMeKey": "5e281c540bc7f3ab8bf59df0ff93fa8dab5d8875"
+  }
+}

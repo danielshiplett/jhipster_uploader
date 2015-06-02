@@ -1,0 +1,161 @@
+<div>
+
+    <h2 translate="uploadExampleApp.upload.home.title">Uploads</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#saveUploadModal" ng-click="clear()">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="uploadExampleApp.upload.home.createLabel">Create a new Upload</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="saveUploadModal" tabindex="-1" role="dialog" aria-labelledby="myUploadLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="save()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myUploadLabel" translate="uploadExampleApp.upload.home.createOrEditLabel">Create or edit a Upload</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="upload.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="uploadExampleApp.upload.originalName">OriginalName</label>
+                            <input type="text" class="form-control" name="originalName"
+                                   ng-model="upload.originalName">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="uploadExampleApp.upload.uploadedAt">UploadedAt</label>
+                            <input type="date" class="form-control" name="uploadedAt"
+                                   ng-model="upload.uploadedAt">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="uploadExampleApp.upload.md5sum">Md5sum</label>
+                            <input type="text" class="form-control" name="md5sum"
+                                   ng-model="upload.md5sum">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="uploadExampleApp.upload.uploadComplete">UploadComplete</label>
+                            <input type="checkbox" class="form-control" name="uploadComplete"
+                                   ng-model="upload.uploadComplete">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="uploadExampleApp.upload.totalChunks">TotalChunks</label>
+                            <input type="number" class="form-control" name="totalChunks"
+                                   ng-model="upload.totalChunks">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="uploadExampleApp.upload.totalSize">TotalSize</label>
+                            <input type="number" class="form-control" name="totalSize"
+                                   ng-model="upload.totalSize">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="uploadExampleApp.upload.completedAt">CompletedAt</label>
+                            <input type="date" class="form-control" name="completedAt"
+                                   ng-model="upload.completedAt">
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteUploadConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(upload.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="uploadExampleApp.upload.delete.question" translate-values="{id: '{{upload.id}}'}">Are you sure you want to delete this Upload?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="uploadExampleApp.upload.originalName">OriginalName</th>
+                    <th translate="uploadExampleApp.upload.uploadedAt">UploadedAt</th>
+                    <th translate="uploadExampleApp.upload.md5sum">Md5sum</th>
+                    <th translate="uploadExampleApp.upload.uploadComplete">UploadComplete</th>
+                    <th translate="uploadExampleApp.upload.totalChunks">TotalChunks</th>
+                    <th translate="uploadExampleApp.upload.totalSize">TotalSize</th>
+                    <th translate="uploadExampleApp.upload.completedAt">CompletedAt</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="upload in uploads">
+                    <td><a ui-sref="uploadDetail({id:upload.id})">{{upload.id}}</a></td>
+                    <td>{{upload.originalName}}</td>
+                    <td>{{upload.uploadedAt}}</td>
+                    <td>{{upload.md5sum}}</td>
+                    <td>{{upload.uploadComplete}}</td>
+                    <td>{{upload.totalChunks}}</td>
+                    <td>{{upload.totalSize}}</td>
+                    <td>{{upload.completedAt}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="uploadDetail({id:upload.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="showUpdate(upload.id)"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(upload.id)"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
