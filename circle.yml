@@ -4,4 +4,4 @@ machine:
 
 general:
   artifacts:
-    - "target"
+    - "target/*.war"
