@@ -1,0 +1,17 @@
+lb:
+  image: tutum/haproxy
+  links:
+    - "web:web"
+  ports:
+    - "80:80"
+  roles:
+    - global
+    
+web:
+  image: ddshipl/jhipster_upload
+  links:
+    - "mongo:mongo"
+  target_num_containers: 1
+  
+mongo:
+  image: mongo
