@@ -1,7 +1,22 @@
 machine:
   java:
     version: oraclejdk8
+  services:
+    - docker
 
 general:
   artifacts:
     - "target/*.war"
+    
+test:
+  override:
+    - mvn clean verify -Pprod
+    - docker info
+    - docker build -t ddshipl/jhipster_upload .
+
+deployment:
+  hub:
+    branch: master
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push ddshipl/jhipster
