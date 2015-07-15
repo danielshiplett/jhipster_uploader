@@ -10,7 +10,7 @@ general:
     
 test:
   override:
-    - mvn clean verify -Pprod
+    - mvn verify -Pprod
     - docker info
     - docker build -t ddshipl/jhipster_upload .
 

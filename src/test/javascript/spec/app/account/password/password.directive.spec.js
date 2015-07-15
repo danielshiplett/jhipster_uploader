@@ -16,6 +16,7 @@ describe('Directive Tests ', function () {
 
         $httpBackend.expectGET(/api\/account\?cacheBuster=\d+/).respond({});
         $httpBackend.expectGET('scripts/components/navbar/navbar.html').respond({});
+        $httpBackend.expectGET('scripts/components/footer/footer.html').respond({});
         $httpBackend.expectGET('i18n/en/global.json').respond({});
         $httpBackend.expectGET('i18n/en/language.json').respond({});
         $httpBackend.expectGET('i18n/en/main.json').respond({});
