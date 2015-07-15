@@ -12,6 +12,10 @@ web:
   links:
     - "mongo:mongo"
   target_num_containers: 1
+  environment:
+    SPRING_DATA_MONGODB_HOST: ${MONGO_PORT_27017_TCP_ADDR}
+    SPRING_DATA_MONGODB_PORT: ${MONGO_PORT_27017_TCP_PORT}
   
 mongo:
+  name: mongo
   image: mongo

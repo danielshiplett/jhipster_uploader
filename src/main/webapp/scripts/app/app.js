@@ -79,6 +79,10 @@ angular.module('uploadExampleApp', ['LocalStorageModule', 'tmh.dynamicLocale',
                                     			'navbar@': {
                                     				templateUrl: 'scripts/components/navbar/navbar.html',
                                     				controller: 'NavbarController'
+                                    			},
+                                    			'footer@': {
+                                    				templateUrl: 'scripts/components/footer/footer.html',
+                                    				controller: 'FooterController'
                                     			}
                                     		},
                                     		resolve: {

@@ -24,11 +24,8 @@
         <div ui-view="navbar" ng-cloak=""></div>
         <div class="container">
             <div class="well" ui-view="content"></div>
-
-            <div class="footer">
-                <p translate="footer">This is your footer</p>
-            </div>
         </div>
+        <div ui-view="footer" ng-cloak=""></div>
 
         <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
         <script>
@@ -75,6 +72,8 @@
         <script src="scripts/components/auth/services/activate.service.js"></script>
         <script src="scripts/components/auth/services/password.service.js"></script>
         <script src="scripts/components/auth/services/register.service.js"></script>
+        <script src="scripts/components/footer/cloud.service.js"></script>
+        <script src="scripts/components/footer/footer.controller.js"></script>
         <script src="scripts/components/form/form.directive.js"></script>
         <script src="scripts/components/form/pager.directive.js"></script>
         <script src="scripts/components/form/pagination.directive.js"></script>
