@@ -12,11 +12,11 @@ test:
   override:
     - mvn verify -Pprod
     - docker info
-    - docker build -t ddshipl/jhipster_upload .
+    - docker build -t dshiplet/jhipster_upload .
 
 deployment:
   hub:
     branch: master
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker push ddshipl/jhipster_upload
+      - docker push dshiplet/jhipster_upload

@@ -10,7 +10,7 @@ lb:
     BALANCE: source
     
 web:
-  image: ddshipl/jhipster_upload
+  image: dshiplet/jhipster_upload
   links:
     - "mongo:mongo"
   target_num_containers: 1
