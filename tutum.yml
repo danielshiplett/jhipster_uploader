@@ -6,6 +6,8 @@ lb:
     - "80:80"
   roles:
     - global
+  environment:
+    BALANCE: source
     
 web:
   image: ddshipl/jhipster_upload
