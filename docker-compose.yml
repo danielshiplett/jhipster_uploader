@@ -1,23 +1,20 @@
 
-lb:
-  image: tutum/haproxy
-  links:
-    - "web:web"
+lb-web:
   ports:
-    - "80:80"
-  roles:
-    - global
-  environment:
-    BALANCE: source
+  - 80:8080
+  tty: true
+  image: rancher/load-balancer-service
+  links:
+  - web:web
+  stdin_open: true
     
 web:
-  image: dshiplet/jhipster_upload
-  links:
-    - "mongo:mongo"
   environment:
     SPRING_DATA_MONGODB_HOST: mongo
-    SPRING_DATA_MONGODB_PORT: 27017
+    SPRING_DATA_MONGODB_PORT: '27017'
+  labels:
+    io.rancher.container.pull_image: always
+  image: dshiplet/jhipster_upload
   
 mongo:
-  name: mongo
   image: mongo
