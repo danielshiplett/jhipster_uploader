@@ -1,0 +1,23 @@
+
+lb:
+  image: tutum/haproxy
+  links:
+    - "web:web"
+  ports:
+    - "80:80"
+  roles:
+    - global
+  environment:
+    BALANCE: source
+    
+web:
+  image: dshiplet/jhipster_upload
+  links:
+    - "mongo:mongo"
+  environment:
+    SPRING_DATA_MONGODB_HOST: mongo
+    SPRING_DATA_MONGODB_PORT: 27017
+  
+mongo:
+  name: mongo
+  image: mongo
