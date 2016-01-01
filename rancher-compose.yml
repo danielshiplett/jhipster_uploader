@@ -1,0 +1,6 @@
+lb:
+  scale: 1
+web:
+  scale: 1
+mongo:
+  scale: 1
